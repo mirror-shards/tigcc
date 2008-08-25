@@ -1,8 +1,9 @@
 /* data.h: Definitions for internal data handling
 
    Copyright (C) 2002-2004 Sebastian Reichelt
-   Copyright (C) 2003-2005 Kevin Kofler
+   Copyright (C) 2003-2008 Kevin Kofler
    Copyright (C) 2004 Billy Charvet
+   Copyright (C) 2008 Lionel Debroux
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -24,6 +25,8 @@
 #include "generic.h"
 #include "lists.h"
 #include "intrface.h"
+
+#include <time.h>
 
 #define MAX_SYM_LEN 255
 
@@ -138,6 +141,10 @@ typedef struct PROGRAM {
 #endif /* DATA_VAR_SUPPORT */
 	OPTIMIZE_INFO
 		*OptimizeInfo;    // Optimization settings and results.
+	struct {
+		time_t LinkTime;
+		I2 Year, Month, Day;
+	} LinkTime;           // Time info, initialized when linking starts.
 } PROGRAM;
 
 // Section in a Program
