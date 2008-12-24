@@ -1,0 +1,12 @@
+[Main]
+Name=int32_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef long int32_t;
+
+[Description]
+A 32-bit signed fixed-width type specified by C99.
+
+[Explanation]
+This type can be used when exactly 32 bits of signed data storage are wanted.

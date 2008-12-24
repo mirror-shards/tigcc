@@ -1,0 +1,12 @@
+[Main]
+Name=int64_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef long long int64_t;
+
+[Description]
+A 64-bit signed fixed-width type specified by C99.
+
+[Explanation]
+This type can be used when exactly 64 bits of signed data storage are wanted.

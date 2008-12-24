@@ -1,0 +1,13 @@
+[Main]
+Name=intmax_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef long long intmax_t;
+
+[Description]
+The largest signed integer on this platform (specified by C99).
+
+[Explanation]
+This type can be used when one wants the widest possible signed integer on the platform. In TIGCC, this type
+is exactly 64 bits.

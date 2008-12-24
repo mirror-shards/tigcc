@@ -1,0 +1,11 @@
+[Main]
+Name=UINT16_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINT16_MAX (65535U)
+
+[Description]
+Maximum value of an unsigned 16-bit integer.
+
+[Explanation]
+This is the maximum value that an unsigned 16-bit integer can contain.

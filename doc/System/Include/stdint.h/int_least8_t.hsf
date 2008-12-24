@@ -1,0 +1,12 @@
+[Main]
+Name=int_least8_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef signed char int_least8_t;
+
+[Description]
+A signed type with at least 8 bits (specified by C99).
+
+[Explanation]
+This type can be used when at least 8 bits of signed data storage are wanted. In TIGCC, its size is exactly 8 bits.

@@ -1,0 +1,12 @@
+[Main]
+Name=INT16_C
+Type=Function
+Subtype=Macro constructor
+Header Files=stdint.h
+Definition=#define INT16_C(c) c
+
+[Description]
+Appends the correct suffix to a 16-bit signed integer literal.
+
+[Explanation]
+This macro appends the correct suffix for a 16-bit signed integer literal to <I>c</I>.

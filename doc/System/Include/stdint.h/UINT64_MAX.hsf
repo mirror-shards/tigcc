@@ -1,0 +1,11 @@
+[Main]
+Name=UINT64_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINT64_MAX (18446744073709551615ULL)
+
+[Description]
+Maximum value of an unsigned 64-bit integer.
+
+[Explanation]
+This is the maximum value that an unsigned 64-bit integer can contain.

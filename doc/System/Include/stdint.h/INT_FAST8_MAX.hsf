@@ -1,0 +1,11 @@
+[Main]
+Name=INT_FAST8_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define INT_FAST8_MAX (32767)
+
+[Description]
+Maximum value of our <A HREF="$$LINK(int_fast8_t)">int_fast8_t</A> type.
+
+[Explanation]
+This is the maximum value that an <A HREF="$$LINK(int_fast8_t)">int_fast8_t</A> can contain on the TIGCC platform.

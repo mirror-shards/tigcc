@@ -1,0 +1,12 @@
+[Main]
+Name=UINT32_C
+Type=Function
+Subtype=Macro constructor
+Header Files=stdint.h
+Definition=#define UINT32_C(c) c ## UL
+
+[Description]
+Appends the correct suffix to a 32-bit unsigned integer literal.
+
+[Explanation]
+This macro appends the correct suffix for a 32-bit unsigned integer literal to <I>c</I>.

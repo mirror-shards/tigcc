@@ -1,0 +1,13 @@
+[Main]
+Name=int_fast32_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef long int_fast32_t;
+
+[Description]
+The fastest signed type with at least 32 bits (specified by C99).
+
+[Explanation]
+This type can be used when at least 32 bits of signed data storage are wanted, and speed is more of a concern than size.
+In TIGCC, its size is exactly 32 bits.

@@ -1,0 +1,11 @@
+[Main]
+Name=INT32_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define INT32_MAX (2147483647L)
+
+[Description]
+Maximum value of a signed 32-bit integer.
+
+[Explanation]
+This is the maximum value that a signed 32-bit integer can contain.

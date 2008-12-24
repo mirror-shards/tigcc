@@ -1,0 +1,11 @@
+[Main]
+Name=INT_LEAST32_MIN
+Type=Constant
+Header Files=stdint.h
+Definition=#define INT_LEAST32_MIN (-2147483647L-1)
+
+[Description]
+Minimum value of our <A HREF="$$LINK(int_least32_t)">int_least32_t</A> type.
+
+[Explanation]
+This is the minimum value that an <A HREF="$$LINK(int_least32_t)">int_least32_t</A> can contain on the TIGCC platform.

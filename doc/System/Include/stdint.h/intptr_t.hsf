@@ -1,0 +1,12 @@
+[Main]
+Name=intptr_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef long intptr_t;
+
+[Description]
+A signed integer large enough to hold a void* pointer (specified by C99).
+
+[Explanation]
+This type can be used when one wants to store a pointer value in a signed integer.

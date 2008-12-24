@@ -1,0 +1,13 @@
+[Main]
+Name=int_fast8_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef short int_fast8_t;
+
+[Description]
+The fastest signed type with at least 8 bits (specified by C99).
+
+[Explanation]
+This type can be used when at least 8 bits of signed data storage are wanted, and speed is more of a concern than size.
+In TIGCC, its size is 16 bits.

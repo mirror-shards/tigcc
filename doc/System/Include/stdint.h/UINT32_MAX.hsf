@@ -1,0 +1,11 @@
+[Main]
+Name=UINT32_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINT32_MAX (4294967295UL)
+
+[Description]
+Maximum value of an unsigned 32-bit integer.
+
+[Explanation]
+This is the maximum value that an unsigned 32-bit integer can contain.

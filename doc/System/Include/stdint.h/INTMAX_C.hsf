@@ -1,0 +1,13 @@
+[Main]
+Name=INTMAX_C
+Type=Function
+Subtype=Macro constructor
+Header Files=stdint.h
+Definition=#define INTMAX_C(c) c ## LL
+
+[Description]
+Appends the correct suffix to a maximally-sized signed integer literal.
+
+[Explanation]
+This macro appends the correct suffix for a maximally-sized (on the TIGCC
+platform) signed integer literal to <I>c</I>.

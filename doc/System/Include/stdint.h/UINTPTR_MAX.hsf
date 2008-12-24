@@ -1,0 +1,11 @@
+[Main]
+Name=UINTPTR_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINTPTR_MAX (4294967295UL)
+
+[Description]
+Maximum value of our <A HREF="$$LINK(uintptr_t)">uintptr_t</A> type.
+
+[Explanation]
+This is the maximum value that an unsigned integer large enough to hold a pointer can contain on the TIGCC platform.

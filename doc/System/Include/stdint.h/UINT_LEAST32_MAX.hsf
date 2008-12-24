@@ -1,0 +1,11 @@
+[Main]
+Name=UINT_LEAST32_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINT_LEAST32_MAX (4294967295UL)
+
+[Description]
+Maximum value of our <A HREF="$$LINK(uint_least32_t)">uint_least32_t</A> type.
+
+[Explanation]
+This is the maximum value that a <A HREF="$$LINK(uint_least32_t)">uint_least32_t</A> can contain on the TIGCC platform.

@@ -1,0 +1,11 @@
+[Main]
+Name=UINT_FAST16_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINT_FAST16_MAX (65535U)
+
+[Description]
+Maximum value of our <A HREF="$$LINK(uint_fast16_t)">uint_fast16_t</A> type.
+
+[Explanation]
+This is the maximum value that an <A HREF="$$LINK(uint_fast16_t)">uint_fast16_t</A> can contain on the TIGCC platform.

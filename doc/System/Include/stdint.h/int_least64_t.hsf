@@ -1,0 +1,12 @@
+[Main]
+Name=int_least64_t
+Type=Type
+Subtype=Scalar
+Header Files=stdint.h
+Definition=typedef long long int int_least64_t;
+
+[Description]
+A signed type with at least 64 bits (specified by C99).
+
+[Explanation]
+This type can be used when at least 64 bits of signed data storage are wanted. In TIGCC, its size is exactly 64 bits.

@@ -1,0 +1,11 @@
+[Main]
+Name=INT_LEAST32_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define INT_LEAST32_MAX (2147483647L)
+
+[Description]
+Maximum value of our <A HREF="$$LINK(int_least32_t)">int_least32_t</A> type.
+
+[Explanation]
+This is the maximum value that an <A HREF="$$LINK(int_least32_t)">int_least32_t</A> can contain on the TIGCC platform.

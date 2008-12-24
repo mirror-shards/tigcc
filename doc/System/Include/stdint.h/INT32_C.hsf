@@ -1,0 +1,12 @@
+[Main]
+Name=INT32_C
+Type=Function
+Subtype=Macro constructor
+Header Files=stdint.h
+Definition=#define INT32_C(c) c ## L
+
+[Description]
+Appends the correct suffix to a 32-bit signed integer literal.
+
+[Explanation]
+This macro appends the correct suffix for a 32-bit signed integer literal to <I>c</I>.

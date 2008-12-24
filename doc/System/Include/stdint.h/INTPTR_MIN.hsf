@@ -1,0 +1,11 @@
+[Main]
+Name=INTPTR_MIN
+Type=Constant
+Header Files=stdint.h
+Definition=#define INTPTR_MIN (-2147483647L-1)
+
+[Description]
+Minimum value of our <A HREF="$$LINK(intptr_t)">intptr_t</A> type.
+
+[Explanation]
+This is the minimum value that a signed integer large enough to hold a pointer can contain on the TIGCC platform.

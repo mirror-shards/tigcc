@@ -1,0 +1,11 @@
+[Main]
+Name=UINT8_MAX
+Type=Constant
+Header Files=stdint.h
+Definition=#define UINT8_MAX (255)
+
+[Description]
+Maximum value of an unsigned 8-bit integer.
+
+[Explanation]
+This is the maximum value that an unsigned 8-bit integer can contain.

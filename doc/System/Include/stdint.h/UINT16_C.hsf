@@ -1,0 +1,12 @@
+[Main]
+Name=UINT16_C
+Type=Function
+Subtype=Macro constructor
+Header Files=stdint.h
+Definition=#define UINT16_C(c) c ## U
+
+[Description]
+Appends the correct suffix to a 16-bit unsigned integer literal.
+
+[Explanation]
+This macro appends the correct suffix for a 16-bit unsigned integer literal to <I>c</I>.
