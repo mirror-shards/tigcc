@@ -116,6 +116,8 @@ BOOLEAN ExportTIOSFile (const PROGRAM *Program, EXP_FILE *File, SIZE FileSize, P
 		RELOC *Reloc;
 		
 		// Write out the relocation table.
+		// AMS reads the table starting from the end, so we loop backwards to have
+		// the table nicely sorted.
 		for (Reloc = GetLast (MainSection->Relocs); Reloc; Reloc = GetPrev (Reloc))
 		{
 			// Get the current file name for error messages.
@@ -228,6 +230,8 @@ BOOLEAN ExportPackedTIOSFile (const PROGRAM *Program, EXP_FILE *File, SIZE FileS
 		RELOC *Reloc;
 		
 		// Write out the relocation table.
+		// AMS reads the table starting from the end, so we loop backwards to have
+		// the table nicely sorted.
 		for (Reloc = GetLast (MainSection->Relocs); Reloc; Reloc = GetPrev (Reloc))
 		{
 			// Get the current file name for error messages.
