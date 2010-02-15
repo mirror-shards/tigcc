@@ -389,7 +389,7 @@ int execute(char *cmdline)
 
     exitcode = system(cmdline);
     exitcode = WEXITSTATUS(exitcode);
-    if(exitcode) {
+    if (exitcode) {
         exit(exitcode);
     }
 
