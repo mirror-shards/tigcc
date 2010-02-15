@@ -1244,6 +1244,10 @@ void clean_files(char *outfile)
                 strcat(executable, "-Titanium.89z");
                 delete(executable);
             }
+
+            strcpy(executable, outfile);
+            strcat(executable, ".dbg");
+            delete(executable);
         }
     }
 }
