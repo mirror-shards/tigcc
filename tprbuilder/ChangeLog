@@ -1,5 +1,10 @@
 Changelog for TIGCC Project Builder
 
+- 2010-02-15, version 1.0.19 (Kevin Kofler)
+        * if a command run by tprbuilder returned a nonzero exit status, exit
+          with that exit status, not 0 (Lionel Debroux)
+        * simplified the code added by Lionel Debroux's above patch
+
 - 2007-05-15, version 1.0.18 (Kevin Kofler)
         * fixed buffer overflow in MIN_AMS sprintf
 

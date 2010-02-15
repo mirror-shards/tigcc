@@ -2,8 +2,8 @@
    tprbuilder - tprbuilder is a MAKE program for TIGCC projects (.tpr files)
 
    Copyright (C) 2002 Romain Liévin
-   Copyright (C) 2002-2007 Kevin Kofler
-   Copyright (C) 2005 Lionel Debroux
+   Copyright (C) 2002-2010 Kevin Kofler
+   Copyright (C) 2005, 2009 Lionel Debroux
 
    This program is free software; you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -24,7 +24,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/types.h>
-
+#ifdef __WIN32__
+#define WIN32_LEAN_AND_MEAN
+#include <windows.h>
+/* our win32_system returns the exit status directly */
+#undef WEXITSTATUS
+#define WEXITSTATUS(exitcode) (exitcode)
+#else
+#include <sys/wait.h>
+#endif
 #include "tprbuilder.h"
 
 #define EXIT_FAILURE 1
@@ -58,9 +66,6 @@ int quiet = 0;
    complete implementation would have to read it from the command line.
 */
 #ifdef __WIN32__
-#define WIN32_LEAN_AND_MEAN
-#include <windows.h>
-
 static inline int win32_system(const char *cmdline)
 {
   char execname[MAX_PATH], *p;
@@ -292,7 +297,7 @@ static int decode_switches (int argc, char **argv)
 
   for (c=1;c<argc;c++) {
     if (!strcmp(argv[c],"-V")||!strcmp(argv[c],"--version")) {
-       printf ("tprbuilder 1.0.18\n");
+       printf ("tprbuilder 1.0.19\n");
        exit(0);
     } else if (!strcmp(argv[c],"-h")||!strcmp(argv[c],"--help")) {
        usage(0);
@@ -376,12 +381,16 @@ int delete(char *filename)
 */
 int execute(char *cmdline)
 {
+    int exitcode;
+
     if (!quiet) {
         fprintf(stderr, "tprbuilder: %s\n", cmdline);
     }
 
-    if(system(cmdline) != 0) {
-        exit(0);
+    exitcode = system(cmdline);
+    exitcode = WEXITSTATUS(exitcode);
+    if(exitcode) {
+        exit(exitcode);
     }
 
     return 0;
